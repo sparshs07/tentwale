@@ -8,7 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="md:container md:mx-auto">
+  <div class="container mx-auto overflow-hidden">
+
         <!-- <div class="row">
             <div class="col">
                  <nav class="bg-gray-200 p-4">
@@ -22,7 +23,7 @@
             </div>
         </div> -->
 
-        <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-36">
+        <div class=" min-h-screen  relative isolate overflow-hidden bg-gray-900 py-24 sm:py-36">
           
           <div class=""></div>
             <img src="static/images/photos-by-lanty-dcb2pog89fQ-unsplash.jpg" alt="" class="absolute inset-0 -z-10 h-[100%] w-[100%] object-content object-right md:object-center">
@@ -41,12 +42,24 @@
               <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
                 <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-bold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
                 
-
-
-                  <a href="signup.do">Create Account <span aria-hidden="true">&rarr;</span></a>
-                  <a href="signin.do">Signin <span aria-hidden="true">&rarr;</span></a>
-                  <a href="#">Our values <span aria-hidden="true">&rarr;</span></a>
-                  <a href="#">Meet our leadership <span aria-hidden="true">&rarr;</span></a>
+                  
+                  
+                  <a href="signup.do" class="inline-flex items-center text-white text-lg hover:text-blue-800 font-medium transition-colors duration-300">
+                    Create Account
+                    <span aria-hidden="true" class="ml-2 text-white-500">&rarr;</span>
+                  </a>
+                  <a href="signin.do" class="inline-flex items-center text-white text-lg hover:text-blue-800 font-medium transition-colors duration-300">
+                    Signin
+                    <span aria-hidden="true" class="ml-2 text-white-500">&rarr;</span>
+                  </a>
+                  <a href="#" class="inline-flex items-center text-white text-lg hover:text-blue-800 font-medium transition-colors duration-300">
+                    Our values
+                    <span aria-hidden="true" class="ml-2 text-white-500">&rarr;</span>
+                  </a>
+                  <a href="#" class="inline-flex items-center text-white text-lg hover:text-blue-800 font-medium transition-colors duration-300">
+                    Meet our leadership
+                    <span aria-hidden="true" class="ml-2 text-white-500">&rarr;</span>
+                  </a>
                 </div>
                 <dl class="mt-16 grid grid-cols-1 gap-0 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
                   <div class="flex flex-col-reverse">
@@ -71,7 +84,7 @@
           </div>
           
 
-        <footer class="bg-zinc-900 text-white p-4">
+        <footer class="bg-zinc-900 text-white p-2">
             <div class="container mx-auto">
               <div class="flex items-center justify-between">
                 <!-- Left side of the footer -->

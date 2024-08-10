@@ -19,57 +19,57 @@
 
 
 
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
-    <!-- Carousel wrapper -->
-    <div class="relative h-72 overflow-hidden  md:h-96">
-         <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="static/images/mitchell-lawler-tbaoryUol_E-unsplash.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="static/images/photos-by-lanty-dcb2pog89fQ-unsplash.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="static/images/ray-hennessy-gdTxVSAE5sk-unsplash.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="static/images/shardayyy-photography-fJzmPe-a0eU-unsplash.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="static/images/thomas-william-OAVqa8hQvWI-unsplash.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+ <!-- Hero Section -->
+ <section class="flex-1 bg-cover bg-center relative h-screen" style="background-image: url('static/images/mitchell-lawler-tbaoryUol_E-unsplash.jpg'); background-size: 150%;">
+    <div class="bg-black bg-opacity-50 w-full h-full absolute"></div>
+    <div class="container mx-auto flex justify-center items-center h-full px-4 relative z-10">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-extrabold mb-4">Make Your Special Day Unforgettable</h1>
+            <p class="text-lg mb-8">Premium tent house and wedding planning services</p>
+            <a href="#services" class="bg-pink-600 hover:bg-pink-700 text-white py-3 px-6 rounded-lg shadow-lg transition duration-300">Explore Our Services</a>
         </div>
     </div>
-    <!-- Slider indicators -->
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-    </div>
-    <!-- Slider controls -->
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
-</div>
+</section>
 
+
+<!-- Services Section -->
+<section id="services" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-2xl font-semibold mb-4">Tent House Services</h3>
+                <p>Elegant and spacious tents for all your event needs.</p>
+            </div>
+            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-2xl font-semibold mb-4">Wedding Planning</h3>
+                <p>Comprehensive planning services to make your wedding day perfect.</p>
+            </div>
+            <div class="bg-gradient-to-r from-pink-500 to-orange-500 text-white p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-2xl font-semibold mb-4">Decoration Services</h3>
+                <p>Stunning decorations to create the perfect ambiance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">About Us</h2>
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="static/images/mitchell-lawler-tbaoryUol_E-unsplash.jpg" alt="About Us" class="rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2 md:pl-12">
+                <p class="text-lg text-gray-700 mb-4">At TentWale, we believe in creating memorable experiences. With years of expertise in the industry, our team is dedicated to making your special day unforgettable.</p>
+                <p class="text-lg text-gray-700">From elegant tent setups to comprehensive wedding planning and breathtaking decorations, we offer a full suite of services to meet all your event needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
 
 
 
@@ -78,11 +78,11 @@
 
 
     <!-- #################FOOTER#################### -->
-    <div class="min-h-screen flex flex-col">
-        <div class="fixed bottom-0 left-0 right-0">
+    <!-- <div class="min-h-screen flex flex-col">
+        <div class="fixed bottom-0 left-0 right-0"> -->
             <c:import url="footer.jsp" />
         </div>
-    </div>
+    <!-- </div> -->
     <!-- #################FOOTER#################### -->
 
    

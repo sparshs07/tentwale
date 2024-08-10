@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 
 </head>
-<body>
+<body class="bg-gray-100 font-sans">
     <!-- ##############HEADER################## -->
         <c:import url="header.jsp" />
     <!-- ##############HEADER################## -->
@@ -18,24 +18,55 @@
 
 
 
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-        <img class="rounded-t-lg" src="static/images/mitchell-lawler-tbaoryUol_E-unsplash.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Your Order is Placed Successfully!</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Your Order Id:498290878923498009</p>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Our Tentwala will contact you shortly!</p>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
-             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>
+
+
+    <!-- Container for the entire page -->
+    <div class="flex items-center justify-center min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-lg">
+            <!-- Title -->
+            <h1 class="text-3xl font-bold text-center text-green-600">
+                Thank You!
+            </h1>
+
+            <!-- Order Confirmation -->
+            <div class="text-center">
+                <svg class="mx-auto h-12 w-12 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7M5 13h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                </svg>
+                <p class="mt-2 text-lg text-gray-600">
+                    Your order has been successfully placed!
+                </p>
+            </div>
+
+            <!-- Order Details -->
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold text-gray-800">Order Details</h2>
+                <div class="mt-4 space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="text-sm font-medium text-gray-600">Order Number:</p>
+                        <p class="text-lg font-bold text-gray-900">#123456789</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="text-sm font-medium text-gray-600">Event Type:</p>
+                        <p class="text-lg font-bold text-gray-900">Wedding</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="text-sm font-medium text-gray-600">Total Amount:</p>
+                        <p class="text-lg font-bold text-gray-900">100000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="mt-8 text-center">
+                <p class="text-gray-600">You will receive a confirmation email shortly with the details of your order. In the meantime, feel free to <a href="#" class="text-green-600 hover:underline">contact us</a> if you have any questions.</p>
+                <a href="#" class="mt-4 inline-block px-6 py-2.5 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    Return to Home
+                </a>
+            </div>
+        </div>
     </div>
-</div>
+
 
 
 

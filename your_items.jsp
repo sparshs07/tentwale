@@ -29,7 +29,7 @@
                 </button>
             </h2>
             <div id="accordion-collapse-body${cn.count}" class="hidden" aria-labelledby="item${cn.count}">
-                <div class="flex flex-wrap justify-start bg-blue-100">
+                <div class="flex flex-wrap justify-start bg-gradient-to-r from-pink-300 to-purple-300">
                     <c:forEach var="tentwala_item" items="${tentwala_items}" varStatus="cm">
                         <c:if test="${your_item_type.itemTypeId==tentwala_item.item.itemType.itemTypeId}">
                             <div class="mx-5 my-8 flex flex-col  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-2xl">
