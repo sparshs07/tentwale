@@ -24,7 +24,7 @@
 
         <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-36">
           
-
+          <div class=""></div>
             <img src="static/images/photos-by-lanty-dcb2pog89fQ-unsplash.jpg" alt="" class="absolute inset-0 -z-10 h-[100%] w-[100%] object-content object-right md:object-center">
           
             <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
