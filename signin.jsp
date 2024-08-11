@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-100 font-sans">
+<body>
     <!-- ############### HEADER ###################### -->
 <div >
     <c:import url="header.jsp"/>
@@ -62,7 +62,7 @@
 <!-- ################MODAL FOR FORGOT PASSWORD###################### -->
 
 <!-- ############BODY################# -->
-<div class="flex min-h-screen flex-col justify-center px-6 pt-24 pb-24   lg:px-8">
+<div class="flex min-h-full flex-col justify-center px-6 pt-24 pb-24   lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <!-- <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"> -->
       <h2 class="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 ">SignIn to your account</h2>

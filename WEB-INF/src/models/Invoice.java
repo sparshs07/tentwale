@@ -31,7 +31,7 @@ public class Invoice {
         int x=-1;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="select user_tentwale_id from invoice where invoice_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,invoiceId);
@@ -50,7 +50,7 @@ public class Invoice {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="Select booked_days from invoice where invoice_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,invoiceId);
@@ -73,7 +73,7 @@ public class Invoice {
         java.sql.Date bt=new java.sql.Date(bookedTo.getTime());
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="update invoice set booked_on=?,booked_to=?,booked_days=?,delivery_email=?,delivery_address=?,delivery_phone=? where invoice_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setDate(1,bo);
@@ -104,7 +104,7 @@ public class Invoice {
     
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
     
             // Check for duplicate record
             String checkDuplicateQuery = "SELECT COUNT(*) FROM invoice WHERE user_id = ? AND user_tentwale_id = ?";
@@ -142,7 +142,7 @@ public class Invoice {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="select invoice_id from invoice where user_id=? and user_tentwale_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,userId);

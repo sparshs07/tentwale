@@ -27,7 +27,7 @@ public class InvoiceItem {
         Boolean flag=false;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="delete from invoice_items where invoice_item_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,invoiceItemId);
@@ -49,7 +49,7 @@ public class InvoiceItem {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="delete from invoice_items where tentwala_item_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1, tentwalaItemId);
@@ -72,7 +72,7 @@ public class InvoiceItem {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="select ii.invoice_item_id, ii.tentwala_item_id,it.name, ii.booked_quantity,twi.unit_price,twi.tentwala_item_pic from invoice_items as ii INNER JOIN tentwala_items as twi INNER JOIN items as it on ii.tentwala_item_id = twi.tentwala_item_id and it.item_id=twi.item_id where ii.invoice_id = ? ";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,invoiceId);
@@ -92,7 +92,7 @@ public class InvoiceItem {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
 
             String checkDuplicate="select count(*) from invoice_items where invoice_id=? and tentwala_item_id=?";
             PreparedStatement psDup=con.prepareStatement(checkDuplicate);
