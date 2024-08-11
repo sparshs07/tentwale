@@ -14,6 +14,7 @@ public class Membership{
     public static final Membership GOLD=new Membership(2,"Gold");    
     public static final Membership PLATINUM=new Membership(3,"Platinum");
 
+
     //Constructors
 
     public Membership(){

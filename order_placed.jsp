@@ -84,11 +84,13 @@
     </div>
     <!-- #################FOOTER#################### -->
 
+    ---------------------
+
    
    <!-- --------------------------MENU BUTTON------------------------ -->
 <script>
   let home=document.querySelector("#home")
-  home.href="tentwala_home.do"
+  home.href="home_profile.do"
   
   let about=document.querySelector("#about")
   about.innerText="Add Items"

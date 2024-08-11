@@ -8,6 +8,7 @@ public class Wishlist {
     private User userId;
     private User userTentwaleId;
 
+
     //Constructors
     public Wishlist(){
 

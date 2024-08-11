@@ -9,7 +9,6 @@ public class InvoiceItem {
     private Invoice invoice;
     private TentwalaItem tentwalaItem;
     private Integer bookedQuantity;
-
    
 
     //Constructors

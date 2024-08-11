@@ -7,6 +7,7 @@ public class ItemType {
     private Integer itemTypeId;
     private String name;
 
+   
     //Constructors
 
     public ItemType(Integer itemTypeId){

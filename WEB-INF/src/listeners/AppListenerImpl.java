@@ -1,13 +1,21 @@
 package listeners;
 
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import java.util.ArrayList;
 
+import models.Invoice;
+import models.InvoiceItem;
+import models.Item;
+import models.ItemType;
 import models.Membership;
 import models.Status;
+import models.TentwalaItem;
+import models.User;
+import models.Wishlist;
 
 
 public class AppListenerImpl implements ServletContextListener{
@@ -25,8 +33,14 @@ public class AppListenerImpl implements ServletContextListener{
         ArrayList<Status>status=Status.collectStatus();
         context.setAttribute("status", status);
 
+        System.out.println("=====================");
+        System.out.println("==========CONFIGURING DATABASE ===========");
+
+        
         System.out.println("===================================");
         System.out.println("=========TENTWALE STARTED!==========");
+
+
     }
     public void contextDestroyed(ServletContextEvent ev){
 

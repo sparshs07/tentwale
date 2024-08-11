@@ -10,6 +10,7 @@ public class Status {
     private Integer statusId;
     private String name;
 
+
     // Constructors
     public Status(){
 

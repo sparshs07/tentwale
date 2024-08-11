@@ -11,7 +11,6 @@ public class TentwalaItem {
     private Integer unitPrice;
     private User userTentwale;
     private String tentwalaItemPic;
-
      
 
     //Constructors
