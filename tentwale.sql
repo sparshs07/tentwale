@@ -100,7 +100,7 @@ INSERT into items (item_id,name,description,item_type_id) values
 CREATE TABLE pincode
 (
     pincode_id int auto_increment Primary Key,
-    pin int not null unique 
+    pin int null 
 );
 -- #######PINCODE#########
 

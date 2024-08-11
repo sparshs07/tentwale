@@ -95,15 +95,15 @@ public class User {
         
     }
 
-    public static ArrayList<User> getTentwaleDetails(String pincode){
+    public static ArrayList<User> getTentwaleDetails(Integer pincode){
         ArrayList<User> userTentwaleDetails=new ArrayList<>();
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
-            String query="select * from users where pincode=? and user_type=1";
+            String query="select * from users as u  inner join pincode as p where u.pincode_id=p.pincode_id and user_type=1 and p.pin=?";
             PreparedStatement ps=con.prepareStatement(query);
-            ps.setString(1,pincode);
+            ps.setInt(1,pincode);
             ResultSet rs=ps.executeQuery();
 
             while(rs.next()){
@@ -137,17 +137,30 @@ public class User {
         return flag;
     }
 
-    public static boolean signupTentwala(String tentwalaName,String address,String pincode,String email,boolean userType){
+    public static boolean signupTentwala(String tentwalaName,String address,String pincode_id,String email,boolean userType){
         boolean flag=false;
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
-            String query="UPDATE users SET tentwala_name = ?, address = ?, pincode = ?, user_type=? WHERE email = ?";
+            String x = "insert into pincode (pin) value (?)" ;
+            PreparedStatement c=con.prepareStatement(x, Statement.RETURN_GENERATED_KEYS);
+            int pc = Integer.parseInt(pincode_id);
+            c.setInt(1, pc);
+            int result = c.executeUpdate();
+            int pci =0;
+            if(result==1){
+                
+                ResultSet rs = c.getGeneratedKeys();
+                if (rs.next()) {
+                   pci= rs.getInt(1);
+                }
+            }
+            String query="UPDATE users SET tentwala_name = ?, address = ?, pincode_id = ?, user_type=? WHERE email = ?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setString(1,tentwalaName);
             ps.setString(2,address);
-            ps.setString(3,pincode);
+            ps.setInt(3,pci);
             ps.setBoolean(4, userType);
             ps.setString(5,email);
 
@@ -215,7 +228,7 @@ public class User {
                         userType=rs.getBoolean("user_type");
                         membership=new Membership(rs.getInt("membership_id"));
                         status=new Status(rs.getInt("status_id"),rs.getString(14));
-                        pincode=rs.getString("pincode");
+                        pincode=rs.getString("pincode_id");
                     }else{
                         statusId=-1;
                     }
