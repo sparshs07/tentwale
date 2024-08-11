@@ -194,7 +194,7 @@ public class User {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
-            String query="select user_id,u.name,email,password,pic,phone,otp,address,tentwala_name,trust_points,user_type,membership_id,u.status_id,pincode,s.status_id,s.name from users as u inner join status as s where email=? and u.status_id=s.status_id";
+            String query="select user_id,u.name,email,password,pic,phone,otp,address,tentwala_name,trust_points,user_type,membership_id,u.status_id,pincode_id,s.status_id,s.name from users as u inner join status as s where email=? and u.status_id=s.status_id";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setString(1,email);
             ResultSet rs=ps.executeQuery();
