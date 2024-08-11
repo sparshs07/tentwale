@@ -12,6 +12,16 @@ CREATE TABLE membership
 insert into membership (membership_id,name) values (1,'Silver'),(2,'Gold'),(3,'Platinum');
 -- #######MEMBERSHIP#########
 
+
+-- #######ITEM_TYPES#########
+CREATE TABLE item_types
+(
+    item_type_id int auto_increment Primary Key,
+    name char(30) not null
+);
+insert into item_types (item_type_id,name) values (1,'Spoon'),(2,'Plates'),(3,'Utensils'),(4,'Chair'),(5,'Pipes')
+,(6,'Curtains'),(7,'Lights'),(8,'Beddings'),(9,'Appliances'),(10,'Others');
+-- #######ITEM_TYPES#########
 -- #######ITEMS#########
 
 CREATE TABLE items
@@ -106,15 +116,6 @@ insert into status (status_id,name) values (1,'Active'),(2,'Deactive'),(3,'Block
 -- #######STATUS#########
 
 
--- #######ITEM_TYPES#########
-CREATE TABLE item_types
-(
-    item_type_id int auto_increment Primary Key,
-    name char(30) not null
-);
-insert into item_types (item_type_id,name) values (1,'Spoon'),(2,'Plates'),(3,'Utensils'),(4,'Chair'),(5,'Pipes')
-,(6,'Curtains'),(7,'Lights'),(8,'Beddings'),(9,'Appliances'),(10,'Others');
--- #######ITEM_TYPES#########
 
 -- #######USERS#########
 
