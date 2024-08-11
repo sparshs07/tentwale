@@ -100,7 +100,7 @@ INSERT into items (item_id,name,description,item_type_id) values
 CREATE TABLE pincode
 (
     pincode_id int auto_increment Primary Key,
-    pin int not null unique 
+    pin int null 
 );
 -- #######PINCODE#########
 
@@ -181,13 +181,17 @@ CREATE TABLE invoice
     invoice_id int auto_increment primary key,
     user_id int not null,
     user_tentwale_id int not null,
-    booked_on datetime not null,
-    booked_days int not null,
+    booked_on datetime  null default CURRENT_TIMESTAMP,
+    booked_days int null default 0,
 
     constraint fk_invoice_users1 foreign key (user_id) references users(user_id),
     constraint fk_invoice_users2 foreign key (user_tentwale_id) references users(user_id)
 
 );
+    alter table invoice add column booked_to datetime  null default CURRENT_TIMESTAMP;
+    alter table invoice add column delivery_email varchar(50)  null default 'test@gmail.com';
+    alter table invoice add column delivery_address varchar(100)  null default 'sbi colony';
+    alter table invoice add column delivery_phone varchar(20)  null default '9999999999';
     -- #######INVOICE#########
 
 
@@ -198,12 +202,10 @@ CREATE TABLE invoice_items
     invoice_item_id int auto_increment primary key,
     invoice_id int not null,
     tentwala_item_id int not null,
-    booked_quantity int not null,
-
     constraint fk_invoiceitems_invoice foreign key (invoice_id) references invoice (invoice_id),
     constraint fk_invoiceitems_items foreign key (tentwala_item_id) references tentwala_items(tentwala_item_id)
 );
 
-alter table invoice_items drop column booked_quantity;
 
+alter table invoice_items add column booked_quantity int null default 0;
 -- #######INVOICE_ITEMS#########
