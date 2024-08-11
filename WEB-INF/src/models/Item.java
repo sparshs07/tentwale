@@ -38,7 +38,7 @@ public class Item {
         Integer typeId=0;
          try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="select item_type_id from items where item_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1, itemId);
@@ -56,7 +56,7 @@ public class Item {
         String description =null;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="select description from items where item_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1, itemId);
@@ -74,7 +74,7 @@ public class Item {
         ArrayList<Item>items =new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="select * from items";
             PreparedStatement ps=con.prepareStatement(query);
             ResultSet rs=ps.executeQuery();

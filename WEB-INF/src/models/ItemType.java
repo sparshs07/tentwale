@@ -23,7 +23,7 @@ public class ItemType {
         ArrayList<ItemType> itemTypes=new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1522858@Pati");
             String query="select * from item_types";
             PreparedStatement ps=con.prepareStatement(query);
             ResultSet rs= ps.executeQuery();
