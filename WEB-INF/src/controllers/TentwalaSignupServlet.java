@@ -50,7 +50,7 @@ public class TentwalaSignupServlet extends HttpServlet {
                 user.setAddress(tentwalaAddress);
                 user.setPincode(pincode);
                 user.setUserType(userType);
-                nextPage="tentwala_home_profile.jsp";
+                nextPage="tentwala_home.jsp";
             }
         }        
         request.getRequestDispatcher(nextPage).forward(request,response);

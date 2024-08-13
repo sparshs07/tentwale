@@ -35,7 +35,7 @@ public class Membership{
         ArrayList<Membership> memberships=new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="Select * from membership";
             PreparedStatement ps=con.prepareStatement(query);
             ResultSet rs=ps.executeQuery();

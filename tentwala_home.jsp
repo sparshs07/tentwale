@@ -24,7 +24,7 @@
     <div class="bg-black bg-opacity-50 w-full h-full absolute"></div>
     <div class="container mx-auto flex justify-center items-center h-full px-4 relative z-10">
         <div class="text-center text-white">
-            <h1 class="text-5xl font-extrabold mb-4">Make Your Special Day Unforgettable</h1>
+            <h1 class="text-5xl font-extrabold mb-4">Time To Make Someones's Day Unforgettable</h1>
             <p class="text-lg mb-8">Premium tent house and wedding planning services</p>
             <a href="#services" class="bg-pink-600 hover:bg-pink-700 text-white py-3 px-6 rounded-lg shadow-lg transition duration-300">Explore Our Services</a>
         </div>

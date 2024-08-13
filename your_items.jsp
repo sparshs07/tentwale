@@ -44,11 +44,11 @@
                                     <p class="mb-3 text-wrap text-sm font-normal text-gray-700 dark:text-gray-400"> <b>Quantity: </b>${tentwala_item.totalQuantity}</p>
                                     <p class="mb-3 text-wrap text-sm font-normal text-gray-700 dark:text-gray-400"><b>Unit Price(Rs.): </b>${tentwala_item.unitPrice}</p>
                                     
-                                    <a href="edit_tentwala_item.do?item_id=${tentwala_item.item.itemId}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                         Edit Item
                                     </a>
                                     <!-- 6/8/2024:THIS WAY IS NOT RELOADING PAGE NOW DELETE USING AJAX/JAVASCRIPT -->
-                                    <a href="delete_tentwala_item.do?tentwala_item_id=${tentwala_item.tentwalaItemId}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    <a  href="#" id="delete_tentwala_item" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                         Delete Item
                                     </a>
                                 </div>
@@ -102,6 +102,40 @@
     display_name.innerHTML=tentwala_name
   </script>
   <!-- ------------------Display Tentwala Name in drop down------------------ -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let delete_item = document.getElementById('delete_tentwala_item');
+
+        if (delete_item) {  // Check if the element exists
+            let remove_tentwala_items = async (tentwala_item_id) => {
+                try {
+                    let response = await fetch('delete_tentwala_item.do?tentwala_item_id=' + encodeURIComponent(tentwala_item_id));
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    let result = await response.text();
+                    return result;
+                } catch (error) {
+                    console.log('Fetch error: ', error);
+                }
+            };
+
+            delete_item.addEventListener('click', () => {
+                remove_tentwala_items(delete_item.value).then((data) => {
+                    if (data === "true") {
+                        window.location.reload();
+                    } else {
+                        console.log('Failed to delete item');
+                    }
+                }).catch((error) => {
+                    console.log(error);
+                });
+            });
+        }
+    });
+</script>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>

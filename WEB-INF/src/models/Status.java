@@ -33,7 +33,7 @@ public class Status {
         ArrayList<Status> status=new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="Select * from status";
             PreparedStatement ps=con.prepareStatement(query);
             ResultSet rs=ps.executeQuery();

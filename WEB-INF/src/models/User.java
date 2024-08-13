@@ -58,7 +58,7 @@ public class User {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="select address from users where user_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,userTentwalaId);
@@ -78,7 +78,7 @@ public class User {
         String s="";
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="select tentwala_name from users where user_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,userTentwalaId);
@@ -100,7 +100,7 @@ public class User {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="select * from users as u  inner join pincode as p where u.pincode_id=p.pincode_id and user_type=1 and p.pin=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,pincode);
@@ -121,7 +121,7 @@ public class User {
         boolean flag=false;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="select user_type from users where email=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setString(1,email);
@@ -142,7 +142,7 @@ public class User {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String x = "insert into pincode (pin) value (?)" ;
             PreparedStatement c=con.prepareStatement(x, Statement.RETURN_GENERATED_KEYS);
             int pc = Integer.parseInt(pincode_id);
@@ -181,7 +181,7 @@ public class User {
         boolean flag=false;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="update users set password=? where email=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setString(1,spe.encryptPassword(password));
@@ -206,7 +206,7 @@ public class User {
         int statusId=0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="select user_id,u.name,email,password,pic,phone,otp,address,tentwala_name,trust_points,user_type,membership_id,u.status_id,pincode_id,s.status_id,s.name from users as u inner join status as s where email=? and u.status_id=s.status_id";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setString(1,email);
@@ -244,7 +244,7 @@ public class User {
     public static void setStatus(Integer status,String email){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="update users set status_id=? where email=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,status);
@@ -261,7 +261,7 @@ public class User {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="select phone from users where phone=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setString(1,phone);
@@ -280,7 +280,7 @@ public class User {
         boolean flag=false;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="insert into users (name,email,password,phone,otp) value (?,?,?,?,?)";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setString(1,name);
@@ -305,7 +305,7 @@ public class User {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="select email from users where user_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,userId);
@@ -324,7 +324,7 @@ public class User {
         boolean flag=false;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="select email from users where email=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setString(1,email);
@@ -345,7 +345,7 @@ public class User {
     public static void setEmailOTP(String name,String email,String otp){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="insert into users (name,email,otp) value (?,?,?)";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setString(1,name);

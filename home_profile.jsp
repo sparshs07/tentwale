@@ -56,13 +56,13 @@
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Event Gallery</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="static/images/mitchell-lawler-tbaoryUol_E-unsplash.jpg" alt="Gallery Image 1" class="w-full h-48 object-cover">
+                    <img src="static/images/shifaaz-shamoon-vhDst8AetiA-unsplash.jpg" alt="Gallery Image 1" class="w-full h-48 object-cover">
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="static/images/photos-by-lanty-dcb2pog89fQ-unsplash.jpg" alt="Gallery Image 2" class="w-full h-48 object-cover">
+                    <img src="static/images/chuttersnap-aEnH4hJ_Mrs-unsplash.jpg" alt="Gallery Image 2" class="w-full h-48 object-cover">
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="static/images/shardayyy-photography-fJzmPe-a0eU-unsplash.jpg" alt="Gallery Image 3" class="w-full h-48 object-cover">
+                    <img src="static/images/aleksandr-popov-DPspiXW2zWg-unsplash.jpg" alt="Gallery Image 3" class="w-full h-48 object-cover">
                 </div>
                 <!-- Add more gallery items as needed -->
             </div>

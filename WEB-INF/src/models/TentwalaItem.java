@@ -39,7 +39,7 @@ public class TentwalaItem {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="delete from tentwala_items where tentwala_item_id=?";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1, tentwalaItemId);
@@ -61,7 +61,7 @@ public class TentwalaItem {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query=" select * from tentwala_items as twi inner join items as it where user_tentwale_id=? and twi.item_id=it.item_id";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1,userId);
@@ -81,7 +81,7 @@ public class TentwalaItem {
         boolean flag=false;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb?user=root&password=1234");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tentwaledb2?user=root&password=1234");
             String query="insert into tentwala_items (item_id,total_quantity,unit_price,user_tentwale_id,tentwala_item_pic) value (?,?,?,?,?)";
             PreparedStatement ps=con.prepareStatement(query);
             ps.setInt(1, itemId);

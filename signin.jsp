@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-gray-100 font-sans">
     <!-- ############### HEADER ###################### -->
 <div >
     <c:import url="header.jsp"/>
@@ -47,7 +47,7 @@
                 <form class="space-y-4" action="#">
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                        <input type="email" name="email" id="modal_email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
+                        <input type="email" name="email" id="modal_email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@gmail.com" required>
                     </div>
                     <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="email_error">Please enter valid Email.We will send you reset link!!</p>
                     <p class="hidden mt-1 text-sm text-green-500 dark:text-green-500" id="sent_email_success">Email sent successfully!Please check email to reset password.</p>
@@ -62,7 +62,7 @@
 <!-- ################MODAL FOR FORGOT PASSWORD###################### -->
 
 <!-- ############BODY################# -->
-<div class="flex min-h-full flex-col justify-center px-6 pt-24 pb-24   lg:px-8">
+<div class="flex min-h-screen flex-col justify-center px-6 pt-24 pb-24   lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <!-- <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"> -->
       <h2 class="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 ">SignIn to your account</h2>

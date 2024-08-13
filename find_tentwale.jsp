@@ -20,7 +20,7 @@
 
     <!-- ----------------BODY-------------------- -->
     
-    <div class="flex flex-col w-9/12 h-1/4 mx-12 md:mx-44">
+    <div class="flex flex-col w-9/12 h-1/4  mx-12 md:mx-44">
 
         <div id="map" class="z-0 border border-blue-500 mt-12"></div>
         
@@ -45,10 +45,10 @@
 
 
     <!-- #################FOOTER#################### -->
-    <div class="min-h-screen flex flex-col">
-        <div class="fixed bottom-0 left-0 right-0">
+     <div class="min-h-screen flex flex-col">
+        <div class="fixed bottom-0 left-0 right-0"> 
             <c:import url="footer.jsp" />
-        </div>
+         </div>
     </div>
     <!-- #################FOOTER#################### -->
 

@@ -19,6 +19,7 @@ public class CheckOutCartServlet extends HttpServlet {
         Integer invoiceId=Integer.parseInt(request.getParameter("invoice_id"));
         ArrayList<InvoiceItem> checkoutCartItems=InvoiceItem.getCartItems(invoiceId);
         request.setAttribute("checkout_cart_items", checkoutCartItems);
+        request.setAttribute("invoice_id", invoiceId);
 
         request.getRequestDispatcher("checkout_page.jsp").forward(request, response);
     }

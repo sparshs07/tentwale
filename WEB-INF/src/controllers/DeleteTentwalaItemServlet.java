@@ -16,11 +16,13 @@ public class DeleteTentwalaItemServlet extends HttpServlet{
     public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException{
         Integer tentwalaItemId=Integer.parseInt(request.getParameter("tentwala_item_id"));
        
-
+        System.out.println("88888888888888888888888888");
+        System.out.println(tentwalaItemId);
+        System.out.println("88888888888888888888888888");
         Boolean flag1=InvoiceItem.deleteItem(tentwalaItemId);
-        Boolean flag=TentwalaItem.deleteItem(tentwalaItemId);
         
-        if(flag)
+        
+        if(flag1)
             request.getRequestDispatcher("your_items.jsp").forward(request, response);
     }
 }

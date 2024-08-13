@@ -1,6 +1,6 @@
-CREATE DATABASE tentwaledb;
+CREATE DATABASE tentwaledb2;
 
-USE tentwaledb;
+USE tentwaledb2;
 
 -- #######MEMBERSHIP#########
 

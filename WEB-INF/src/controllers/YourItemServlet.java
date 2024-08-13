@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import models.Invoice;
 import models.Item;
 import models.ItemType;
 import models.TentwalaItem;
@@ -36,6 +37,11 @@ public class YourItemServlet extends HttpServlet{
 
         ArrayList<Item> items=Item.getItems();
         session.setAttribute("your_items", items);
+
+        Integer invoiceId=Invoice.getInvoiceId(userId);
+        System.out.println("Your_Item_servlet");
+        System.out.println(invoiceId);
+        request.setAttribute("invoice_id", invoiceId);
         }
         request.getRequestDispatcher("your_items.jsp").forward(request, response);
     }

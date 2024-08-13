@@ -44,15 +44,15 @@
                 <div class="mt-4 space-y-4">
                     <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
                         <p class="text-sm font-medium text-gray-600">Order Number:</p>
-                        <p class="text-lg font-bold text-gray-900">#123456789</p>
+                        <p class="text-lg font-bold text-gray-900">#TW${random}</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
                         <p class="text-sm font-medium text-gray-600">Event Type:</p>
-                        <p class="text-lg font-bold text-gray-900">Wedding</p>
+                        <p class="text-lg font-bold text-gray-900">Occasion</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
                         <p class="text-sm font-medium text-gray-600">Total Amount:</p>
-                        <p class="text-lg font-bold text-gray-900">100000</p>
+                        <p class="text-lg font-bold text-gray-900">${total_price}</p>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
             <!-- Next Steps -->
             <div class="mt-8 text-center">
                 <p class="text-gray-600">You will receive a confirmation email shortly with the details of your order. In the meantime, feel free to <a href="#" class="text-green-600 hover:underline">contact us</a> if you have any questions.</p>
-                <a href="#" class="mt-4 inline-block px-6 py-2.5 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <a href="home_profile.do" class="mt-4 inline-block px-6 py-2.5 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
                     Return to Home
                 </a>
             </div>
@@ -77,14 +77,12 @@
 
 
     <!-- #################FOOTER#################### -->
-    <div class="min-h-screen flex flex-col">
-        <div class="fixed bottom-0 left-0 right-0">
+    <!-- <div class="min-h-screen flex flex-col">
+        <div class="fixed bottom-0 left-0 right-0"> -->
             <c:import url="footer.jsp" />
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
     <!-- #################FOOTER#################### -->
-
-    ---------------------
 
    
    <!-- --------------------------MENU BUTTON------------------------ -->
